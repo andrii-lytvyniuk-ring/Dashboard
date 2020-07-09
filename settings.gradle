@@ -1,4 +1,7 @@
 include ':Connector:app'
+include ':Connector:dashboard_adapter'
+include ':Connector:login_adapter'
+include ':Connector:settings_adapter'
 
 include 'dashboard'
 
