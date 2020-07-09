@@ -1,4 +1,4 @@
-# MultiModuleApp
+# Dashboard
 This repository is a part of proposal of main app modularization.
 Sample application has 3 features: *dashboard*, *login* and *settings*.
 Also there is a core module which is *legacyapp* and 
