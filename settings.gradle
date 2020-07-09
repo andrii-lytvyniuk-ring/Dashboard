@@ -1,0 +1,8 @@
+include ':connector-repository:app'
+include ':connector-repository:settings_adapter'
+include ':connector-repository:dashboard_adapter'
+include ':connector-repository:login_adapter'
+
+include 'dashboard'
+
+rootProject.name = "Dashboard"
