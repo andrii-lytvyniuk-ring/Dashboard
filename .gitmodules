@@ -1,0 +1,3 @@
+[submodule "Connector"]
+	path = Connector
+	url = git@github.com:andrii-lytvyniuk-ring/Connector.git

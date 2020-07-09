@@ -25,8 +25,8 @@ android {
 }
 
 dependencies {
-    api project(path: ':base-repository:legacy-app')
-    api project(path: ':base-repository:global-navigator')
+    api files("$rootDir/remote-repository/global-navigator-debug.aar")
+    api files("$rootDir/remote-repository/legacy-app-debug.aar")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.1.0'
