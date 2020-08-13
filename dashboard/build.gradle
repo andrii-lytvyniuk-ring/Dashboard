@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -25,10 +26,15 @@ android {
 }
 
 dependencies {
-    api files("$rootDir/remote-repository/global-navigator-debug.aar")
-    api files("$rootDir/remote-repository/legacy-app-debug.aar")
+    compileOnly files("$rootDir/remote-repository/global-navigator-debug.aar")
+    compileOnly files("$rootDir/remote-repository/legacy-app-debug.aar")
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    compileOnly "androidx.appcompat:appcompat:$app_compat_version"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compileOnly "androidx.core:core-ktx:$core_ktx_version"
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    compileOnly "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    compileOnly "com.google.dagger:dagger-android-support:$dagger_version"
 }
